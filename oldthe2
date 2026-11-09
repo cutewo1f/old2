@@ -1,4 +1,14 @@
 
+/* @import url("https://milbits.github.io/oldcord/src/main.css"); */
+@import url("https://milbits.github.io/oldcord/src/components/vars.css");
+@import url("https://milbits.github.io/oldcord/src/components/color.css");
+@import url("https://milbits.github.io/oldcord/src/components/imgs.css");
+@import url("https://milbits.github.io/oldcord/src/components/other.css");
+/* @import url("https://milbits.github.io/oldcord/src/components/redesign.css");*/
+/*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
+/*@import url(https://davart154.github.io/Themes/Snippets/Chat%20Bar%20Context%20Menu/ChatContextMenuSource.css); */
+
+
 //@import url(https://davart154.github.io/Themes/Icon%20Revert%202023/2023%20Icon%20Revert.css);
 
 /* Import Fonts */
@@ -17,13 +27,13 @@
     --custom-channel-header-height: var(--custom-channel-header-height, 48px);
 }
 
-/** FONTS **/
+/* * FONTS *
 :root, :root:lang(ko) {
     --font-primary: "경기천년제목 Light", "Pretendard JP Variable", Arial, sans-serif;
     --font-display: "경기천년제목 Light", "Pretendard JP Variable", Arial, sans-serif;
     --font-headline: "경기천년제목 Light", "Pretendard JP Variable", Arial, sans-serif;
     --font-code: "JetBrains Mono", "Goorm Sans Code 400", Arial, monospace;
-}
+} */
 
 /** VISUAL REFRESH STYLES (OLD) **/
 .visual-refresh {
@@ -180,7 +190,7 @@ section[class^=title_] {
 
 [class^=jumpToPresentBar_] {
     display: contents;
-    color: transparent !important;
+    
     > button:first-child {
         display: none;
     }
@@ -259,7 +269,12 @@ section[class^=title_] {
 
 /** ALIGNED CHATBOX (NEW) **/
 [class^=chatContent_] > form {
-    padding: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+    
     > div > [class^=channelTextArea_] {
         margin: 0px !important;
         border-bottom: 0px;
@@ -272,14 +287,54 @@ section[class^=title_] {
         margin: 0px;
         padding: 0px;
         height: var(--custom-channel-textarea-text-area-height);
-        border-bottom: 0px;
+        border-bottom: 0px ;
         border-radius: 0px;
     }
     > [class^=typing_] {
         top: -24px;
-        margin-left: auto;
+        margin-right: auto;
         width: fit-content;
         padding-left: 2px;
         padding-right: 8px;
     }
 }
+
+@container style(--dtm-16-hide-windows-titlebar: true) {
+  .bar_3zSH5d.systemBar_3zSH5d.systemBar_3zSH5d.systemBar_3zSH5d.systemBar_3zSH5d {
+    display: none !important;
+  }
+  .base_pog62O {
+    margin-top: 0 !important;
+  }
+  #app-mount .container_zrUwGA .peopleColumn_zrUwGA .searchBar_wVFOQW {
+    top: 0 !important;
+  }
+}
+
+:root{
+ --oldcord-tint: 210; 
+ --oldcord-tint-intensity: 11.11;
+ --reaction-animation: 0; 
+}
+
+.user-profile-sidebar::after {
+   
+    --profile-gradient-start:  color-mix(in oklab, var(--profile-gradient-overlay-color) 100%, var(--profile-gradient-primary-color));
+    --profile-gradient-end:  color-mix(in oklab, var(--profile-gradient-overlay-color) 100%, var(--profile-gradient-secondary-color));
+    
+    content: 
+   "  ╱|、   \a"
+ "  (˚ˎ 。7  \a"
+  "  |、˜〵\  \a"
+"    じしˍ,)ノ";
+
+    white-space: pre;
+    inset: 0;
+    padding: 20px;
+    color: white;
+    
+    background: linear-gradient(var(--profile-gradient-start), var(--profile-gradient-start) var(--custom-user-profile-banner-height), var(--profile-gradient-end));
+    text-align: center;
+    font-size: 150%;
+}
+
