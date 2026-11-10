@@ -61,7 +61,6 @@
                 width: calc(100% - 216px);
             }
         }
-
         & > div.bar_c38106 {
             position: absolute;
             position-anchor: --vr-header-snippet;
